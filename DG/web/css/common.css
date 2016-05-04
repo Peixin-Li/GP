@@ -1,0 +1,288 @@
+/* 
+* @Author: lpx
+* @Date:   2016-02-26 18:30:34
+* @Last Modified time: 2016-03-10 18:42:12
+*/
+
+/*正在使用的组件*/
+/*公用*/
+#main-body{ overflow-y: hidden; }
+#main-body .hiddenRow{ height: 0; }
+
+
+/*导航栏*/
+.navbar{ position: fixed; top: 0; width: 100%; border-bottom: 1px solid #eeece8; }
+
+/*导航栏上部*/
+.navbar-main{ height: 55px; width: 100%; background: #ffffff; padding-left: 15px; }
+
+/*导航栏上部-模块名称*/
+.nav-main-title{ width: 300px; height: 55px; padding: 10px 7px 7px 7px; /*text-align: center;*/ }
+.nav-main-title i{ color: #92908D; font-size: 26px; margin-right: 11px; }
+.nav-main-title h3{ display: inline-block; font-size: 21px;}
+
+/*导航栏下部*/
+.navbar-sub{ padding-left: 7px; height: 28px; width: 100%; background: #ffffff; }
+
+/*导航栏下部-导航*/
+.navbar-sub-modnav{ margin-left: 58px; height: 28px; }
+.navbar-sub-modnav li{ float: left; margin-right: 42px; padding: 0 8px 4px 8px; font-size: 16px; border-bottom: 2px solid #ffffff; color: #92908D; letter-spacing: 2px; cursor: pointer; }
+.navbar-sub-modnav .active{ color: #da4f4a; border-bottom-color: #da4f4a; } 
+
+/*内容容器*/
+.content-wrap{ overflow-x: auto; margin: 14px; position: relative; }
+
+/*工作台界面********************************************************************************************************************************/
+
+/*任务列表（包括任务列表标题、任务列表任务）*/
+.taskList{ width: 276px; min-height: 110px; background: #EEECE8; display: inline-block; margin-right: 10px; border-radius: 5px; vertical-align: top; }
+
+/*任务详情*/
+#taskDetail{ position: absolute; right: -700px; top: 0; width: 700px; height: 100%; background: #ffffff; z-index: 10; box-shadow: 1px 0 5px rgba(0,0,0,0.14); transition: 500ms; -webkit-transition: 500ms; overflow-y: hidden; }
+#taskDetail-top{ height: 54px; border-bottom: 1px solid #EEECE8; padding-left: 30px; }
+#taskDetail-top ul{ padding: 5px 0 5px 0; position: relative; }
+#deleteTaskBtn{ position: absolute; right: 20px; }
+#taskDetail-top ul li{ float: left; width: 86px; height: 44px; line-height: 44px; color: #908E8C; cursor: pointer; text-align: center; }
+#taskDetail-top ul li:hover{ background: #F8F6F2; color: #DA4F4A; }
+#taskDetail-top ul li p{ display: inline-block; }
+#taskDetail-top ul li i{ margin-right: 8px; }
+#taskDetail-name{ cursor: pointer; }
+#taskDetail-content{ padding: 20px 30px 20px 30px; }
+#taskDetail-describe{ margin-bottom: 40px; }
+#taskDetail-createTime{ height: 30px; border-top: 1px solid #e2e6ec; line-height: 30px; font-size: 12px; color: #acaba7; }
+#taskDetail-addDescribe{ resize: none; width: 600px; height: 190px; }
+#taskDetail-projectName{ color: #C7C6C4; font-size: 14px; margin-bottom: 14px; }
+#taskDetail-name{ font-size: 20px; margin-bottom: 14px; }
+.taskDetail-avatar{ width: 40px; height: 40px; border:1px solid #F7F7F7; border-radius: 50%; cursor: pointer; vertical-align: top; margin-right: 4px; }
+.taskDetail-text{ color: #6f6e6b; font-size: 13px; margin-bottom: 12px; }
+#taskDetail-addAvatar{ font-size: 40px; color: #92908D; cursor: pointer; }
+#taskDetail-avatarContainer{ height: 40px; margin-bottom: 30px; }
+
+/*任务列表标题*/
+.taskList-title{ clear: both; height: 44px; }
+.taskList-title .taskList-name{ height: 44px; padding: 7px 9px 7px 9px; width: 130px; float: left; }
+.taskList-title .taskList-name > h2{ height: 30px; font-size: 16px; line-height: 30px; color: #6F6E6B; }
+.taskList-title .taskList-num{ height: 44px; padding: 7px 9px 7px 9px; width: 47px; float: right; text-align: center; }
+.taskList-title .taskList-num > h2{ height: 30px; font-size: 12px; line-height: 30px; color: #bcb7af; }
+
+/*任务列表任务（包含任务卡）*/
+.taskList-task{ padding: 0 8px 6px 8px; }
+
+/*任务卡*/
+.task{ width: 260px; min-height: 72px; padding-bottom: 5px; background: #ffffff; margin-bottom: 4px; border: 1px solid #E8E8EA; cursor: pointer; position: relative; overflow: auto; }
+.task:hover{ background: #F8F6F2; }
+.task .task-main{ height: 35px; position: relative; padding: 11px 0 3px 0;}
+.task .task-main > a{ color: #E2DED6; font-size: 18px; display: inline-block; position: absolute; left: 12px; top: 10px; }
+.task .task-main > a:hover{  color: #62B974; }
+.task .task-main > p{ display: inline-block; height: 21px; line-height: 21px; margin: 0 24px 0 32px;}
+.task .task-changing{ float: left; height: 28px; margin: 0 32px 0 32px; }
+.task .task-changing .task-projectName{ color: #ACABA7; font-size: 11px; height: 28px; line-height: 28px;}
+.task .task-avatar{ float: right; padding: 0 8px 0 8px; }
+.task .task-avatar img{ width: 28px; height: 28px; border:1px solid #F7F7F7; border-radius: 50%; background-color: #F7F7F7; }
+
+/*旧的组件*/
+
+/*登录页面胶囊式标签页*/
+/*.pillsTag{ color: #ffffff; text-align: center; }
+.pillsTag li a{ width: 100px; color: #ffffff; }
+.pillsTag > li > a:hover, .pillsTag > li > a:focus { color: #ffffff; background-color: #D68642; }
+.pillsTag > li.active > a, .pillsTag > li.active > a:hover, .pillsTag > li.active > a:focus { color: #ffffff; background-color: #D68642; }*/
+
+/*主界面顶部栏*/
+/*.header{ height: 54px; background-color: #ffffff; border-bottom: 1px solid #D9E0E7;}
+.header .header-logo{ width: 220px; height: 54px; background-color: #ffffff; float: left; border-bottom: 1px solid #D9E0E7;}
+.header .header-topMenu{ width: 440px; height: 54px; background-color: #ffffff; float: right; border-bottom: 1px solid #D9E0E7;}*/
+
+/*模态框*/
+.modal-header{ text-align: center; }
+.modal-header h4{ display: inline-block; font-size: 20px; }
+.model-mainContent{ padding: 0 40px 30px 40px; min-height: 150px; }
+.model-mainContent .model-intro{ font-size: 18px; display: inline-block; }
+.model-select{ color: #acaba7; }
+.model-select option{ color: #000000; }
+
+/*系统消息模态框*/
+#findTeam-tipsModel{ top: 30%; }
+#findTeam-tipsModel .modal-dialog{ width: 360px; }
+#findTeam-tipsModel .modal-dialog .modal-body{ height: 60px; }
+
+#tipsModal{ top: 30%; }
+#tipsModal .modal-dialog{ width: 360px; }
+#tipsModal .modal-dialog .modal-body{ height: 60px; }
+
+/*小模块*/
+/*.module{ padding: 20px 5px 20px 5px; }*/
+
+/*左右布局*/
+.layout-left{ float: left; }
+.layout-left-title{ color: #777; font-size: 17px; padding-bottom: 10px; border-bottom: 1px solid #F8F6F2; }
+.layout-left ul li{ /*height: 79px;*/ /*line-height: 80px;*/ border-bottom: 1px solid #F8F6F2; font-size: 14px; color: #484744; text-align: center; }
+/*.layout-left ul li div{ padding: 0; }*/
+.layout-left ul li img{ border: 1px solid #d1e1ec; border-radius: 50%; }
+.layout-right{ width: 230px; float: right; padding: 30px 20px 0 20px; background: #F8F6F2; }
+.layout-right-menu{ width: 190px; height: 300px; }
+.layout-right-menu .btn{ margin-bottom: 12px; }
+.layout-right-menu .btn-success{ width: 190px; background-color: #55D09F; border: 0; outline: none; }
+.layout-right-menu .btn-success:hover{ background-color: #4DBE91; }
+.layout-right-menu ul li{ width: 190px; padding: 5px 0 5px 21px; margin-bottom: 7px; cursor: pointer; }
+.layout-right-menu ul .active{ background-color: #EEECE8; }
+.layout-right-menu ul li:hover{ background-color: #EEECE8; }
+.layout-right-menu p{ color: #777; }
+/*.layout-right-menu button{ display: block; }*/
+/*日历*/
+/*.calendar-top{ height: 30px; padding-bottom: 7px; }
+.calendar-top div i{ display: inline-block; color: #CACFD3; }
+.calendar-top div i:hover{ color: #ACABA7; }
+.calendar-top div p{ display: inline-block; }
+.calendar-top div .year{ margin-left: 30px; }
+.calendar-top div .month{ margin-right: 30px; }
+
+.calendar table{ width: 99%; text-align: center; }
+.calendar table thead tr{ background: #EEECE8; color: #777;  }
+.calendar table thead tr th{ text-align: center; height: 30px; padding-top: 4px; }
+.calendar table tbody tr td{ background: #fff; border: 1px solid #F8F6F2; position: relative; }
+.calendar table tbody tr td:hover{ background-color: #F8F6F2; }
+.calendar table tbody tr td .date{ position: absolute; top: 0; left: 5px; color: #333333; }*/
+
+/*头像*/
+.avatar{ width: 40px; height: 40px; border:1px solid #F7F7F7; border-radius: 50%; background-color: #F7F7F7; }
+
+/*infoRow*/
+.infoRow{ padding-left: 180px; padding-right: 130px; position: relative; }
+.infoRow .infoRow-left{ position: absolute; left: 32px; top: 0; }
+.infoRow .infoRow-right{ position: absolute; right: 15px; top: 0; }
+.infoRow .infoRow-middle{ text-align: left; margin-left: 18px; line-height: 11px; }
+.infoRow .infoRow-middle h4{ margin-top: 18px; margin-bottom: 12px; font-size: 18px; }
+.infoRow .infoRow-middle div{ line-height: 14px; }
+.infoRow .infoRow-middle div i{ color: #aaa; }
+.infoRow .infoRow-middle div p{ color: #777; line-height: 11px; }
+.infoRow .infoRow-projectName{ font-size: 11px; color: #b9b9b7; }
+
+
+.list-task{ min-width: 240px; box-sizing: border-box; color: #fff; }
+.list-task .list-task-doing{ background: #71A3D0; border-radius: 5px 0 0 5px; text-align: center; }
+.list-task .list-task-doing:hover{ background: #357CBC; }
+.list-task .list-task-fail{ background: #F2F1F7; text-align: center; }
+.list-task .list-task-done{ background: #87DEBB; border-radius: 0 5px 5px 0; text-align: center; }
+.list-task .list-task-done:hover{ background: #55D09F; }
+.list-task span{ display: inline-block; width: 80px; height: 42px; line-height: 42px; }
+
+
+/*日历*/
+#calendar{}
+/*#calendar .fc-left{ margin-left: 10px; }*/
+.calendar .fc-bg .fc-today{ background-color: #EEECE8; }
+.calendar .fc-left h2{ margin-top: 10px; margin-left: 20px; }
+.calendar .fc-head-container{ height: 27px; background-color: #EEECE8; padding-top: 7px; color: #777; }
+.calendar .fc-day{ background-color: #ffffff; border-color: #f8f6f2; padding-top: 25px; }
+.calendar .fc-day:hover{ background-color: #F8F6F2; }
+.calendar .fc-content{ height: 25px; line-height: 25px; }
+#calendar1 .fc-day-number,#calendar2 .fc-day-number,#calendar3 .fc-day-number{ text-align: left; }
+
+/*日历内部标签*/
+.tag{ width: 90%; height: 20px; background-color: green; border-radius: 5px; margin: 0 auto; color: #fff; padding:3px 5px; }
+
+/*按钮*/
+/*按钮1-确定*/
+.btn1{  border: 1px solid #55D09F; background: #55D09F; }
+.btn1:hover{ background: #4DBE91; border: 1px solid #55D09F; }
+/*按钮2-拒绝*/
+.btn2{ border: 1px solid #D63A35; color: #D63A35; }
+.btn2:hover{ background: #D63A35; color: #fff; }
+
+/*添加成员图标*/
+.addAvatar{  font-size: 40px; color: #92908D; cursor: pointer;  }
+
+/*可以选择的成员*/
+.memberChoose{ width: 56px; height: 60px; display: inline-block; border: 1px solid #000; border-radius: 5px; text-align: center; font-size: 12px; cursor: pointer;  }
+.memberChoose:hover{ background: #F8F6F2; }
+.memberChoose img{ border: 0; }
+
+/*添加成员框*/
+.addMember{ width: 250px; min-height: 170px; border: 1px solid #eeece8; }
+.addMember .addMember-header{ width: 250px; height: 43px; border-bottom: 1px solid #f8f6f2; }
+.addMember .addMember-header p{ font-size: 16px; color: #d9d7d3; line-height: 43px; text-align: center; }
+.addMember .addMember-body{ padding: 15px; }
+.addMember .addMember-body .addMember-search{ margin: 5px 0 10px 0; }
+.addMember .addMember-body .addMember-list li{ height: 28px; line-height: 28px; padding: 2px 14px 2px 36px; margin: 0 5px 5px 5px; }
+.addMember .addMember-body .addMember-list li img{ width: 28px; height: 28px; }
+.addMember .addMember-body .addMember-list li .addMember-name{ margin-left: 10px; }
+
+/*模态框*/
+/*.modal{ top: 20%; }*/
+.modal-dialog{  }
+
+/*成员选择器*/
+.memberSelecter{ font-size: 40px; line-height: 40px; height: 40px; margin-top: 8px; vertical-align: top; position: relative; }
+.memberSelecter img{ width: 40px; height: 40px; display: inline-block; vertical-align: top; cursor: pointer; }
+.memberSelecter a{ outline-style: none; /*position: absolute; right: 10px; top: 0;*/ }
+.memberSelecter a i{ cursor: pointer; color: #92908D; }
+
+.memberList{ width: 250px; }
+.memberList .memberTitle{ font-size: 16px; color: #d9d7d3; height: 43px; border-bottom: 1px solid #f8f6f2; text-align: center; line-height: 43px; }
+.memberList .member{ padding: 15px 7px 5px 7px; }
+.memberList .member ul li{ height: 34px; line-height: 34px; padding: 0 14px 0 30px; cursor: pointer; position: relative; }
+.memberList .member ul li:hover{ background-color: #F1EDE5; }
+.memberList .member ul li img{ width: 28px; height: 28px; display: inline-block; margin-right: 20px; vertical-align: middle; }
+.memberList .member ul li p{ display: inline-block; }
+.memberList .member ul li i{ color: #54D09F; font-size: 16px; position: absolute; right: 40px; top: 10px; }
+
+/*已完成的任务*/
+.fa-check-square-o{ color: #5CB76F; }
+.task-complete{ color: #999; text-decoration: line-through; }
+
+/*任务详情框按钮Div*/
+#taskDetail-conformDiv{ margin-bottom: 25px; height: 34px; }
+
+/*调整任务详情框中成员选择器位置*/
+/*#taskDetail .popover{ left: 370px !important; }*/
+/*#taskDetail .memberSelecter a{ right: 97px; }*/
+#changeTaskMember{ margin-bottom: 10px; }
+/*弹出框指向*/
+/*.arrow{ display: none !important; }*/
+/*确定按钮*/
+.accept{ background-color: #54D09F; }
+.accept:hover{ /*border-color: #4DBE91;*/ background-color: #4DBE91; }
+
+/*日期选择器*/
+.popover{ max-width: 330px; }
+/*.popover-content{ padding: 0; }*/
+#main-body .popover-content{ padding: 0; }
+.dateSelect{ width: 310px; height: auto; background-color: #fff; }
+.dateSelect-title{ width: 310px; height: 43px; border-bottom: 1px solid #F8F6F2; padding: 13px 15px; text-align: center; }
+.dateSelect-title p{ font-size: 16px; color: #d9d7d3; }
+.dateSelect-body{ padding: 15px; width: 310px; height: auto; overflow-y: auto; overflow-x: hidden; }
+.dateSelect-body textarea{ width: 280px; resize: vertical; padding: 6px 12px; border-radius: 5px; margin-bottom: 10px; outline: none; }
+.dateSelect-body #WdateStart{ border-color: #A9A9A9; display: inline-block; }
+.dateSelect-body #WdateEnd{ border-color: #A9A9A9; display: inline-block; }
+.dateSelect-body p{ display: inline-block; color: #A9A9A9; }
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+/* 滚动槽 */
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px #F5F5F5; border-radius: 10px;}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb { border-radius: 10px; background: #DBD6CD; -webkit-box-shadow: inset 0 0 6px #DBD6CD;}
+::-webkit-scrollbar-thumb:window-inactive { background: #DBD6CD;}
+
+/*日历插件样式*/
+body .Wdate{ width: 280px; height: 32px; padding: 5px; border-radius: 5px; margin-bottom: 10px; color: #A9A9A9; }
+iframe .WdateDiv{ width: 272px; }
+
+/*日历中的颜色选择器*/
+#colorSelect{ width: 280px; height: 32px; padding: 0; margin-bottom: 10px; }
+.color{ width: 56px; height: 28px; display: inline-block; border-radius: 5px; border: 2px solid #fff; cursor: pointer; }
+.color:hover{ border: 2px solid #444444; }
+#color1{ background-color: #D61818; }
+#color2{ background-color: #F0C019; }
+#color3{ background-color: #5B96CF; }
+#color4{ background-color: #4CB749; }
+#colorSelect .active{ border: 2px solid #444444; }
+/*任务完成情况弹出框*/
+.task-popover{ width: 80px; text-align: center; height: 24px; line-height: 24px; font-size: 13px; color: #846E6B; }
+
+/*模态框下移*/
+.modal-content{ top: 120px; }
+#tipsModal .modal-content{ top: 0; }
+#findTeam-tipsModel .modal-content{ top: 0; }
+
