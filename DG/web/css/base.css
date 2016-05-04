@@ -1,0 +1,172 @@
+/* 
+* @Author: lpx
+* @Date:   2016-02-26 18:26:07
+* @Last Modified time: 2016-03-10 18:07:21
+*/
+
+/*css reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ margin: 0; padding: 0; }
+table{ border-collapse: collapse; border-spacing: 0; }
+fieldset,img{ border: 0; }
+address,caption,cite,code,dfn,em,strong,th,var{ font-style: normal; font-weight: normal; }
+ol,ul{ list-style: none; }
+caption,th{ text-align: left; }
+h1,h2,h3,h4,h5,h6{ font-size: 100%; font-weight: normal; }
+q:before,q:after{ content: ''; }
+abbr,acronym{ border:0; }
+a{text-decoration: none;}
+a:link{ text-decoration: none; }
+a:hover{ text-decoration: none; }
+body{ font-family: '微软雅黑'; overflow-x: hidden; overflow-y: auto; }
+textarea{ resize: none; }
+
+
+/*文字排版*/
+.bold{ font-weight: bold; }
+.f12{ font-size: 12px; }
+.f17{ font-size: 17px; }
+.f20{ font-size: 20px; }
+.f28{ font-size: 28px; }
+.f36{ font-size: 36px; }
+.lh16{ line-height: 16px; }
+.lh28{ line-height: 28px; }
+.lh80{ line-height: 80px; }
+.lh100{ line-height: 100px; }
+
+/*定位*/
+.tc{ text-align: center; }
+.tl{ text-align: left; }
+.tr{ text-align: right; }
+.bc{ margin-left: auto; margin-right: auto; }
+.fl{ float: left; }
+.fr{ float: right; }
+.cb{ clear: both; }
+.pa{ position: absolute; }
+.pr{ position: relative; }
+.pf{ position: fixed; }
+.t0{ top: 0; }
+.t56{ top: 56px; }
+.b0{ bottom: 0; }
+.b58{ bottom: 58px; }
+.l0{ left: 0; }
+.mt80{ margin-top: 80px; }
+
+/*长度高度*/
+.w{ width: 100%; }
+.wp20{ width: 20%; }
+.wp60{ width: 60%; }
+.w30{ width: 30px; }
+.w40{ width: 40px; }
+.w42{ width: 42px; }
+.w56{ width: 56px; }
+.w60{ width: 60px; }
+.w90{ width: 90px; }
+.w100{ width: 100px; }
+.w120{ width: 120px; }
+.w125{ width: 125px; }
+.w180{ width: 180px; }
+.w190{ width: 190px; }
+.w292{ width: 292px; }
+.w295{ width: 295px; }
+.w300{ width: 300px; }
+.w320{ width: 320px; }
+.w380{ width: 380px; }
+.w960{ width: 960px; }
+.h{ height: 100%; }
+.h14{ height: 14px; }
+.h16{ height: 16px; }
+.h20{ height: 20px; }
+.h22{ height: 22px; }
+.h28{ height: 28px; }
+.h30{ height: 30px; }
+.h34{ height: 34px; }
+.h40{ height: 40px; } 
+.h42{ height: 42px; }
+.h45{ height: 45px; }
+.h48{ height: 48px; }
+.h55{ height: 55px; }
+.h56{ height: 56px; }
+.h60{ height: 60px; }
+.h80{ height: 80px; }
+.h85{ height: 85px; }
+.h89{ height: 89px; }
+.h100{ height: 100px; }
+.h130{ height: 130px; }
+.h150{ height: 150px; }
+.h344{ height: 344px; }
+.h450{ height: 450px; }
+.h550{ height: 550px; }
+
+/*边距*/
+.p14{ padding: 14px; }
+.p20{ padding: 20px 20px 20px 20px; }
+
+.pt8{ padding-top: 8px; }
+.pt10{ padding-top: 10px; }
+.pt15{ padding-top: 15px; }
+.pt16{ padding-top: 16px; }
+.pt20{ padding-top: 20px; }
+.pt21{ padding-top: 21px; }
+.pt23{ padding-top: 23px; }
+.pt83{ padding-top: 83px; }
+.pt36{ padding-top: 36px; }
+.pb8{ padding-bottom: 8px; }
+.pb14{ padding-bottom: 14px; }
+.pb15{ padding-bottom: 15px; }
+.pb36{ padding-bottom: 36px; }
+.pl30{ padding-left: 30px; }
+.pl35{ padding-left: 35px; }
+.pl45{ padding-left: 45px; }
+.pr20{ padding-right: 20px; }
+.pr30{ padding-right: 30px; }
+
+.m14{ margin: 14px; }
+
+
+.ml10{ margin-left: 10px; }
+.ml60{ margin-left: 60px; }
+.mr10{ margin-right: 10px; }
+.mr18{ margin-right: 18px; }
+.mr20{ margin-right: 20px; }
+.mr26{ margin-right: 26px; }
+.mr30{ margin-right: 30px; }
+.mr46{ margin-right: 46px; }
+.mr50{ margin-right: 50px; }
+.mt-4{ margin-top: -4px; }
+.mt-50{ margin-top: -50px; }
+.mt7{ margin-top: 7px; }
+.mt10{ margin-top: 10px; }
+.mt12{ margin-top: 12px; }
+.mt20{ margin-top: 20px; }
+.mt30{ margin-top: 30px; }
+.mt33{ margin-top: 33px; }
+.mt40{ margin-top: 40px; }
+.mt50{ margin-top: 50px; }
+.mt83{ margin-top: 83px; }
+.mb8{ margin-bottom: 8px; }
+.mb10{ margin-bottom: 10px; }
+.mb15{ margin-bottom: 15px; }
+.mb20{ margin-bottom: 20px; }
+.mb30{ margin-bottom: 30px; }
+.mb40{ margin-bottom: 40px; }
+.mb50{ margin-bottom: 50px; }
+.mb70{ margin-bottom: 70px; }
+
+/*颜色*/
+.bcwhite{ background-color: white; }
+.bcF8F6F2{ background: #F8F6F2; }/*主页背景色*/
+.bc2E2D2B{ background: #2E2D2B; }/*主页左侧边栏背景色*/
+.bcf2f5e9{ background: #f2f5e9; }/*登录页面背景色*/
+.white{ color: #ffffff; }
+.red{ color: red; }
+.c449D44{ color: #449D44;}
+.cF8F6F2{ color: #F8F6F2; }
+
+/*显示*/
+.block{ display: block; }
+.inline{ display: inline; }
+.inline-block{ display: inline-block; }
+.hidden{ display: none; }
+.oh{ overflow: hidden; }
+
+/*其他*/
